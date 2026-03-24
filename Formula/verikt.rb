@@ -11,7 +11,7 @@ class Verikt < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/diktahq/verikt/releases/download/v0.1.0/verikt_0.1.0_darwin_amd64.tar.gz"
-      sha256 "44d934fb47f479e60a823cf5fae1f24617e29d7e5449b71f3a53c1f7f128c854"
+      sha256 "7546597eb8d7932af91ccd04af6cf7b513ec2cf5b00b2b57714eb1c403b86f79"
 
       define_method(:install) do
         bin.install "verikt"
@@ -19,7 +19,7 @@ class Verikt < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/diktahq/verikt/releases/download/v0.1.0/verikt_0.1.0_darwin_arm64.tar.gz"
-      sha256 "7992fcca6e98ce340736b371d257cfdf0338ce4a9fc6473ee9b72a0af7f45a85"
+      sha256 "7ab37725d5f1a4dca7e8da0172854e6d425d47e2d7d60857e831ef4e38cc5768"
 
       define_method(:install) do
         bin.install "verikt"
@@ -30,14 +30,14 @@ class Verikt < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/diktahq/verikt/releases/download/v0.1.0/verikt_0.1.0_linux_amd64.tar.gz"
-      sha256 "d32ec0f4400a51a85fc2136c3bc0ac2f99a98d22a5fdbf0e2c7beaab82b94636"
+      sha256 "0332f63da445a4788d7945b287e03fe4a003bbb21a42517ab2a59456aba1a08e"
       define_method(:install) do
         bin.install "verikt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/diktahq/verikt/releases/download/v0.1.0/verikt_0.1.0_linux_arm64.tar.gz"
-      sha256 "39f9a9849f1c84e9749688160497ebfbe1032841ca84393a648b46de80104e24"
+      sha256 "d527981ff58adc6988fe9fc1985f85a95c9b5f27699a6b40909a54c458d18605"
       define_method(:install) do
         bin.install "verikt"
       end
