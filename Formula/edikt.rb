@@ -4,10 +4,30 @@
 class Edikt < Formula
   desc "Governance layer for agentic engineering"
   homepage "https://github.com/diktahq/edikt"
-  url "https://github.com/diktahq/edikt/releases/download/v0.5.0/edikt-v0.5.0.tar.gz"
-  sha256 "98fe40080d46928aa6e469f02b96e22ee2ca5b472dd995bc585957748a00d615"
   license "Elastic-2.0"
-  version "0.5.0"
+  version "0.5.1"
+
+  on_macos do
+    on_arm do
+      url "https://github.com/diktahq/edikt/releases/download/v0.5.1/edikt-v0.5.1-darwin-arm64.tar.gz"
+      sha256 "d70275ca837b96bdd7a02d47c297aef8e514bd03ded4252950c80fbf8128414f"
+    end
+    on_intel do
+      url "https://github.com/diktahq/edikt/releases/download/v0.5.1/edikt-v0.5.1-darwin-amd64.tar.gz"
+      sha256 "c13ac6adca4506b67eea8d1270b4870c9645ca7fe20504e3236d47fe291eea43"
+    end
+  end
+
+  on_linux do
+    on_arm do
+      url "https://github.com/diktahq/edikt/releases/download/v0.5.1/edikt-v0.5.1-linux-arm64.tar.gz"
+      sha256 "8842074cf3f744d0d91c418731d50001a0a83725f170af2628e58c5a1699dc6b"
+    end
+    on_intel do
+      url "https://github.com/diktahq/edikt/releases/download/v0.5.1/edikt-v0.5.1-linux-amd64.tar.gz"
+      sha256 "08aa3d06cddb0d5d2d5f2e258a142c2362ad753960c57bd13de2a174ab046de1"
+    end
+  end
 
   def install
     bin.install "bin/edikt"
