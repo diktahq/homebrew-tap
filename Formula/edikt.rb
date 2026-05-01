@@ -5,7 +5,7 @@ class Edikt < Formula
   desc "Governance layer for agentic engineering"
   homepage "https://github.com/diktahq/edikt"
   url "https://github.com/diktahq/edikt/releases/download/v0.5.0/edikt-v0.5.0.tar.gz"
-  sha256 "PLACEHOLDER"
+  sha256 "98fe40080d46928aa6e469f02b96e22ee2ca5b472dd995bc585957748a00d615"
   license "Elastic-2.0"
   version "0.5.0"
 
