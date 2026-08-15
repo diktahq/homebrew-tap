@@ -5,21 +5,21 @@
 class Verikt < Formula
   desc "Your architecture, in every agent session"
   homepage "https://github.com/diktahq/verikt"
-  version "0.1.0"
+  version "0.2.0"
   license "Elastic-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/diktahq/verikt/releases/download/v0.1.0/verikt_0.1.0_darwin_amd64.tar.gz"
-      sha256 "7546597eb8d7932af91ccd04af6cf7b513ec2cf5b00b2b57714eb1c403b86f79"
+      url "https://github.com/diktahq/verikt/releases/download/v0.2.0/verikt_0.2.0_darwin_amd64.tar.gz"
+      sha256 "c7b48db359fe830d1cdc0121de09d2236e4763d32211a52e92cef16cfd0c8590"
 
       define_method(:install) do
         bin.install "verikt"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/diktahq/verikt/releases/download/v0.1.0/verikt_0.1.0_darwin_arm64.tar.gz"
-      sha256 "7ab37725d5f1a4dca7e8da0172854e6d425d47e2d7d60857e831ef4e38cc5768"
+      url "https://github.com/diktahq/verikt/releases/download/v0.2.0/verikt_0.2.0_darwin_arm64.tar.gz"
+      sha256 "5f927e241bd219fbc097d40f3369727cfc3a0d2d9eea94e4240f86e60e1c7b1a"
 
       define_method(:install) do
         bin.install "verikt"
@@ -29,15 +29,15 @@ class Verikt < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/diktahq/verikt/releases/download/v0.1.0/verikt_0.1.0_linux_amd64.tar.gz"
-      sha256 "0332f63da445a4788d7945b287e03fe4a003bbb21a42517ab2a59456aba1a08e"
+      url "https://github.com/diktahq/verikt/releases/download/v0.2.0/verikt_0.2.0_linux_amd64.tar.gz"
+      sha256 "17559add01ee48ef34f4f8e85b38aa021d1047808ea6c808ed8c4a509866ef12"
       define_method(:install) do
         bin.install "verikt"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/diktahq/verikt/releases/download/v0.1.0/verikt_0.1.0_linux_arm64.tar.gz"
-      sha256 "d527981ff58adc6988fe9fc1985f85a95c9b5f27699a6b40909a54c458d18605"
+      url "https://github.com/diktahq/verikt/releases/download/v0.2.0/verikt_0.2.0_linux_arm64.tar.gz"
+      sha256 "bc62db7758a63a7fe60fbbf712b1b9ac34834507680cc0bc2171fe2d6c4098fb"
       define_method(:install) do
         bin.install "verikt"
       end
