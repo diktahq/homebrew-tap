@@ -5,27 +5,27 @@ class Edikt < Formula
 desc "Governance layer for agentic engineering"
 homepage "https://github.com/diktahq/edikt"
 license "Elastic-2.0"
-version "0.6.0-rc5"
+version "0.7.0"
 
 on_macos do
   on_arm do
-    url "https://github.com/diktahq/edikt/releases/download/v0.6.0-rc5/edikt-v0.6.0-rc5-darwin-arm64.tar.gz"
-    sha256 "e9be5bd12ea2a219db6e0ae0e7cc7caa13bd9f98106392cbdb5495dbdb6f2009"
+    url "https://github.com/diktahq/edikt/releases/download/v0.7.0/edikt-v0.7.0-darwin-arm64.tar.gz"
+    sha256 "9f680cb8c36d2ab5ac5b29c5cc865a7743f2f127c9066aaec9872ee43ada8a25"
   end
   on_intel do
-    url "https://github.com/diktahq/edikt/releases/download/v0.6.0-rc5/edikt-v0.6.0-rc5-darwin-amd64.tar.gz"
-    sha256 "bde3d65cfa2afdbc518a8c149bdf8bc2d5a368065e4826d23fbd55cf7db060c3"
+    url "https://github.com/diktahq/edikt/releases/download/v0.7.0/edikt-v0.7.0-darwin-amd64.tar.gz"
+    sha256 "029f360cb306d10aa4a470c23a5481e252c5748e7c9c71be83411589a12aa9aa"
   end
 end
 
 on_linux do
   on_arm do
-    url "https://github.com/diktahq/edikt/releases/download/v0.6.0-rc5/edikt-v0.6.0-rc5-linux-arm64.tar.gz"
-    sha256 "9ae320ba0ad3fd1b8704ddc08138fe125f1aac16fd2f10df5943afb1ed1d8b42"
+    url "https://github.com/diktahq/edikt/releases/download/v0.7.0/edikt-v0.7.0-linux-arm64.tar.gz"
+    sha256 "2c3d5fe14bede60d3b9789854d63b288b8b4cdaeef98119d7c4c7d6f7ba0b9a9"
   end
   on_intel do
-    url "https://github.com/diktahq/edikt/releases/download/v0.6.0-rc5/edikt-v0.6.0-rc5-linux-amd64.tar.gz"
-    sha256 "2621855a2be55e5ee403238298ae033353d1c99d48f3064176126570536163e7"
+    url "https://github.com/diktahq/edikt/releases/download/v0.7.0/edikt-v0.7.0-linux-amd64.tar.gz"
+    sha256 "9ea5483d49751632a5cda5516eddf9c0b30c874ed60242be6a2e16dc188c5926"
   end
 end
 
