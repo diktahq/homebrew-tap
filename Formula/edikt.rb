@@ -2,38 +2,56 @@
 # frozen_string_literal: true
 
 class Edikt < Formula
-  desc "Governance layer for agentic engineering"
-  homepage "https://github.com/diktahq/edikt"
-  license "Elastic-2.0"
-  version "0.8.0"
+desc "Governance layer for agentic engineering"
+homepage "https://github.com/diktahq/edikt"
+license "Elastic-2.0"
+version "0.9.0"
 
-  on_macos do
-    on_arm do
-      url "https://github.com/diktahq/edikt/releases/download/v0.8.0/edikt-v0.8.0-darwin-arm64.tar.gz"
-      sha256 "22065e9e32f49d0906831056860e66400fc356b59ba64776764a2362a3377a51"
-    end
-    on_intel do
-      url "https://github.com/diktahq/edikt/releases/download/v0.8.0/edikt-v0.8.0-darwin-amd64.tar.gz"
-      sha256 "2b599cda8ad9e3dd3901efac09edc92cf65b957af270d362a832340a2a3c6257"
-    end
+on_macos do
+  on_arm do
+    url "https://github.com/diktahq/edikt/releases/download/v0.9.0/edikt-v0.9.0-darwin-arm64.tar.gz"
+    sha256 "efcf973f672e39da0fce20f6da512041bb30903d4ac36818da559eb5f5df9dec"
   end
+  on_intel do
+    url "https://github.com/diktahq/edikt/releases/download/v0.9.0/edikt-v0.9.0-darwin-amd64.tar.gz"
+    sha256 "481cd8545d73a0a88a1e9a1c4361d2041804dd347d6864018edf26631cc3bbe3"
+  end
+end
 
-  on_linux do
-    on_arm do
-      url "https://github.com/diktahq/edikt/releases/download/v0.8.0/edikt-v0.8.0-linux-arm64.tar.gz"
-      sha256 "672b958b035775172f95b8ce675d22fd5359d3441eb3473f44bcc9ee57d8d5ef"
-    end
-    on_intel do
-      url "https://github.com/diktahq/edikt/releases/download/v0.8.0/edikt-v0.8.0-linux-amd64.tar.gz"
-      sha256 "7579f01cc7f2b1792e69bed236995cfe8c2624744d83235790a7cecbf2cffe6a"
-    end
+on_linux do
+  on_arm do
+    url "https://github.com/diktahq/edikt/releases/download/v0.9.0/edikt-v0.9.0-linux-arm64.tar.gz"
+    sha256 "ff3ccaf121409fb82e20310a39d690284170c7949a1dd527ade9c2d81026ee59"
   end
+  on_intel do
+    url "https://github.com/diktahq/edikt/releases/download/v0.9.0/edikt-v0.9.0-linux-amd64.tar.gz"
+    sha256 "fdd1175b921ce05107e6ff44f55f57bebb54a76b3624dd380429e567131323ac"
+  end
+end
 
-  def install
-    bin.install "bin/edikt"
-  end
+def install
+  bin.install "bin/edikt"
+end
 
-  test do
-    assert_match version.to_s, shell_output("#{bin}/edikt version")
-  end
+def caveats
+  <<~EOS
+    Homebrew installed the edikt LAUNCHER only. The payload — commands,
+    agents, hooks and rule packs — is a separate download:
+
+      edikt install v0.9.0
+      edikt use v0.9.0
+
+    Then run /edikt:init from Claude Code inside a project.
+
+    The two halves upgrade independently:
+      brew upgrade edikt   updates the launcher
+      edikt upgrade        updates the payload
+
+    Neither updates the other, so run both when moving versions.
+  EOS
+end
+
+test do
+  assert_match version.to_s, shell_output("#{bin}/edikt version")
+end
 end
