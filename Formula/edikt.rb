@@ -5,27 +5,27 @@ class Edikt < Formula
 desc "Governance layer for agentic engineering"
 homepage "https://github.com/diktahq/edikt"
 license "Elastic-2.0"
-version "0.9.0"
+version "0.9.1"
 
 on_macos do
   on_arm do
-    url "https://github.com/diktahq/edikt/releases/download/v0.9.0/edikt-v0.9.0-darwin-arm64.tar.gz"
-    sha256 "efcf973f672e39da0fce20f6da512041bb30903d4ac36818da559eb5f5df9dec"
+    url "https://github.com/diktahq/edikt/releases/download/v0.9.1/edikt-v0.9.1-darwin-arm64.tar.gz"
+    sha256 "51cc7c51a7321b56616a0596ca900c67545ddecac53a2924b6d1dea629f06fd0"
   end
   on_intel do
-    url "https://github.com/diktahq/edikt/releases/download/v0.9.0/edikt-v0.9.0-darwin-amd64.tar.gz"
-    sha256 "481cd8545d73a0a88a1e9a1c4361d2041804dd347d6864018edf26631cc3bbe3"
+    url "https://github.com/diktahq/edikt/releases/download/v0.9.1/edikt-v0.9.1-darwin-amd64.tar.gz"
+    sha256 "e0897d6a9ca984f004192eed6709ac4f44ed039cef61129fd4a07ee5b84c0d39"
   end
 end
 
 on_linux do
   on_arm do
-    url "https://github.com/diktahq/edikt/releases/download/v0.9.0/edikt-v0.9.0-linux-arm64.tar.gz"
-    sha256 "ff3ccaf121409fb82e20310a39d690284170c7949a1dd527ade9c2d81026ee59"
+    url "https://github.com/diktahq/edikt/releases/download/v0.9.1/edikt-v0.9.1-linux-arm64.tar.gz"
+    sha256 "355520ad14be0ea5dac1709e9c89a032b66857a6828e18b64c92bddd530dbb5b"
   end
   on_intel do
-    url "https://github.com/diktahq/edikt/releases/download/v0.9.0/edikt-v0.9.0-linux-amd64.tar.gz"
-    sha256 "fdd1175b921ce05107e6ff44f55f57bebb54a76b3624dd380429e567131323ac"
+    url "https://github.com/diktahq/edikt/releases/download/v0.9.1/edikt-v0.9.1-linux-amd64.tar.gz"
+    sha256 "fcdbaa213618d994d6b0dab2e5d471db28a301fb7e90732f5eff35ed143a7a2f"
   end
 end
 
@@ -38,8 +38,8 @@ def caveats
     Homebrew installed the edikt LAUNCHER only. The payload — commands,
     agents, hooks and rule packs — is a separate download:
 
-      edikt install v0.9.0
-      edikt use v0.9.0
+      edikt install v0.9.1
+      edikt use v0.9.1
 
     Then run /edikt:init from Claude Code inside a project.
 
